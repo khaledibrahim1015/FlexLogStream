@@ -1,0 +1,6 @@
+@TestFlexLogStream.api_HostAddress = http://localhost:5039
+
+GET {{TestFlexLogStream.api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
