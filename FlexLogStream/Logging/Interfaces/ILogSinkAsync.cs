@@ -9,5 +9,7 @@ namespace FlexLogStream.Logging.Interfaces;
 /// </summary>
 public interface ILogSinkAsync
 {
+    Task LogAsync(string message);
+    Task LogAsync(string message, LogLevel level);
     Task LogAsync(string message, LogLevel logLevel, Exception exception = default);
 }

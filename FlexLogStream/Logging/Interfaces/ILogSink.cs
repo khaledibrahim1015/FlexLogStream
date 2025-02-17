@@ -9,5 +9,7 @@ namespace FlexLogStream.Logging.Interfaces;
 /// </summary>
 public interface ILogSink
 {
+    void Log(string message);
+    void Log(string message, LogLevel level);
     void Log(string message, LogLevel logLevel, Exception exception = default);
 }
