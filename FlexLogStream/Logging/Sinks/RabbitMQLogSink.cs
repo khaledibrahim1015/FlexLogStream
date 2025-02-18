@@ -143,7 +143,7 @@ public class RabbitMQLogSink : ILogSinkAsync, IDisposable, IAsyncDisposable
     /// Checks if the RabbitMQ connection is active.
     /// </summary>
     /// <returns>True if the connection is active, otherwise false.</returns>
-    private bool IsConnectionActive()
+    public bool IsConnectionActive()
     {
         lock (_lock)
         {
@@ -155,7 +155,7 @@ public class RabbitMQLogSink : ILogSinkAsync, IDisposable, IAsyncDisposable
     /// <summary>
     /// Attempts to reconnect to RabbitMQ.
     /// </summary>
-    private void Reconnect()
+    public void Reconnect()
     {
         lock (_lock)
         {
